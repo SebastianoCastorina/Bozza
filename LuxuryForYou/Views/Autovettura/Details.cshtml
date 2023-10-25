@@ -1,0 +1,90 @@
+﻿@model LuxuryForYou.Models.Autovettura
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Autovettura</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CasaMadre.NomeCasaMadre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CasaMadre.NomeCasaMadre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeModello)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeModello)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Colore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Colore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Costo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Costo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Chilometraggio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chilometraggio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Luogo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Luogo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Anno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Anno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HasAsta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HasAsta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HasEpoca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HasEpoca)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idAuto }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

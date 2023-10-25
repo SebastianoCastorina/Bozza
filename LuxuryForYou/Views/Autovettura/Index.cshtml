@@ -1,0 +1,162 @@
+﻿@model IEnumerable<LuxuryForYou.Models.Autovettura>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Le Nostre Meraviglie</h2>
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CasaMadre.NomeCasaMadre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeModello)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Colore)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Costo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chilometraggio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Luogo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Anno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasAsta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasEpoca)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CasaMadre.NomeCasaMadre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomeModello)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Colore)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Costo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Chilometraggio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Luogo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Anno)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HasAsta)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HasEpoca)
+                </td>
+                <td>
+                    <p>
+                        @Html.ActionLink("Create New", "Create")
+                    </p>
+
+                    @Html.ActionLink("Edit", "Edit", new { id = item.idAuto }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.idAuto }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.idAuto })
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+else
+{
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CasaMadre.NomeCasaMadre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeModello)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Colore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Costo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Chilometraggio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Luogo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Anno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HasAsta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HasEpoca)
+        </th>
+        <th></th>
+    </tr>
+</table>
+}
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CasaMadre.NomeCasaMadre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomeModello)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Colore)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Costo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Chilometraggio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Luogo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Anno)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HasAsta)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HasEpoca)
+                </td>
+
+                </tr>
+               
+               
+        }

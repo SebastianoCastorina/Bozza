@@ -1,0 +1,33 @@
+﻿@model IEnumerable<LuxuryForYou.Models.CasaMadre>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeCasaMadre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeCasaMadre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idCasaMadre }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idCasaMadre }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idCasaMadre })
+        </td>
+    </tr>
+}
+
+</table>
